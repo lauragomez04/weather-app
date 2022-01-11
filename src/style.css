@@ -1,0 +1,164 @@
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(242, 235, 243) 0%,
+    rgb(234, 241, 249) 90.1%
+  );
+  font-family: "Josefin Sans", sans-serif;
+  color: #77529e;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin-top: -15px;
+}
+
+h1 {
+  font-size: 40pt;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 300;
+  text-align: left;
+}
+
+#basic-addon3:hover {
+  background-color: rgb(165, 189, 253, 0.01);
+}
+
+.units {
+  font-size: 10px;
+  margin-top: -100px;
+  position: relative;
+  top: -20px;
+}
+
+.fahrenheit {
+  color: #8db0ff;
+  text-decoration: none;
+}
+
+.fahrenheit:hover {
+  color: #77529e;
+}
+
+.celsius {
+  text-decoration: none;
+  color: #77529e;
+}
+
+.cover {
+  background-color: rgb(165, 189, 253, 0.17);
+  border-radius: 12px;
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.date {
+  color: #77529e;
+  font-weight: 300;
+  margin-top: -102px;
+  text-align: right;
+}
+
+.time {
+  font-size: 23pt;
+  font-weight: 300;
+  margin-bottom: -10px;
+}
+
+.main-data {
+  margin-top: 32px;
+}
+
+.container {
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba(117, 117, 117, 0.2);
+  display: block;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 700px;
+}
+
+.container-2 {
+  background-color: rgb(165, 189, 253, 0.17);
+  border-radius: 12px;
+  font-weight: 300;
+  padding: 7px;
+  margin-right: 0.1rem;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.container-fluid {
+  margin-top: 20px;
+  text-align: center;
+  padding-left: 0.8rem;
+}
+
+.col .sunday,
+.monday,
+.tuesday,
+.wednesday,
+.thursday {
+  background-color: rgb(165, 189, 253, 0.17);
+  border-radius: 12px;
+  font-size: 10pt;
+  font-weight: 300;
+  margin-right: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.thursday {
+  margin-right: -10px;
+}
+
+.bi-sun,
+.bi-cloud-sun,
+.bi-cloud-rain-heavy,
+.bi-cloud-lightning-rain {
+  font-size: 16pt;
+}
+
+.bi-brightness-high {
+  display: block;
+  font-size: 40pt;
+  font-weight: bold;
+  text-align: left;
+}
+
+.form-control {
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  font-weight: 300;
+}
+
+.form-control:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.input-group-text {
+  background-color: rgb(255, 255, 255);
+  color: #77529e;
+}
+
+.summer-il {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
