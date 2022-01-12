@@ -27,6 +27,7 @@ h2 {
 h3 {
   font-weight: 300;
   text-align: left;
+  margin-bottom: 0;
 }
 
 #basic-addon3:hover {
@@ -97,7 +98,7 @@ h3 {
   font-weight: 300;
   padding: 7px;
   margin-right: 0.1rem;
-  margin-top: 150px;
+  margin-top: 115px;
   text-align: center;
 }
 
@@ -130,6 +131,17 @@ h3 {
 .bi-cloud-rain-heavy,
 .bi-cloud-lightning-rain {
   font-size: 16pt;
+}
+
+.current-lowest-temp,
+.degree,
+.temp-min,
+.temp-min-1,
+.temp-min-2,
+.temp-min-3,
+.temp-min-4 {
+  color: #77529e;
+  opacity: 50%;
 }
 
 .bi-brightness-high {
