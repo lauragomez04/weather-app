@@ -79,13 +79,18 @@ function showCityTemperature(response) {
   );
   let city = response.data.name;
   let country = response.data.sys.country;
-  document.querySelector("#typed-city").innerHTML = `${city}, ${country}`;
-  document.querySelector("#wind-speed").innerHTML = Math.round(
-    response.data.wind.speed * 3.6
-  );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
+  let typedCity = document.querySelector("#typed-city");
+  let description = document.querySelector("#description");
+  let hiCurrentTemp = document.querySelector("#current-highest-temp");
+  let loCurrentTemp = document.querySelector("#current-lowest-temp");
+  let windSpeed = document.querySelector("#wind-speed");
+  let humidity = document.querySelector("#humidity");
+  typedCity.innerHTML = `${city}, ${country}`;
+  description.innerHTML = response.data.weather[0].description;
+  hiCurrentTemp.innerHTML = Math.round(response.data.main.temp_max);
+  loCurrentTemp.innerHTML = Math.round(response.data.main.temp_min);
+  windSpeed.innerHTML = Math.round(response.data.wind.speed * 3.6);
+  humidity.innerHTML = response.data.main.humidity;
 }
 
 //
