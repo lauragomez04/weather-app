@@ -34,6 +34,10 @@ h3 {
   background-color: rgb(165, 189, 253, 0.01);
 }
 
+#description::first-letter {
+  text-transform: capitalize;
+}
+
 .units {
   font-size: 10px;
   margin-top: -100px;
@@ -63,7 +67,7 @@ h3 {
   padding-bottom: 30px;
 }
 
-.date {
+.date-format {
   color: #77529e;
   font-weight: 300;
   margin-top: -102px;
@@ -72,8 +76,17 @@ h3 {
 
 .time {
   font-size: 23pt;
-  font-weight: 300;
   margin-bottom: -10px;
+}
+
+.date {
+  font-size: 14pt;
+}
+
+.last-update {
+  opacity: 40%;
+  margin-top: -4px;
+  font-size: 12pt;
 }
 
 .main-data {

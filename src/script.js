@@ -1,46 +1,38 @@
-let now = new Date();
-let currentHours = now.getHours();
-if (currentHours < 10) {
-  currentHours = `0${currentHours}`;
+//Last update date & time //
+
+function formatDate() {
+  let currentTime = new Date();
+  let hours = currentTime.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = currentTime.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  let day = days[currentTime.getDay()];
+  let months = [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec",
+  ];
+  let month = months[currentTime.getMonth()];
+  let date = currentTime.getDate();
+  let updatedTime = document.querySelector("#current-time");
+  let updatedDate = document.querySelector("#current-date");
+  updatedTime.innerHTML = `${hours}:${minutes}`;
+  updatedDate.innerHTML = `${day}, ${date} ${month}.`;
 }
-
-let currentMinutes = now.getMinutes();
-if (currentMinutes < 10) {
-  currentMinutes = `0${currentMinutes}`;
-}
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Sunday",
-];
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-
-let day = days[now.getDay()];
-let month = months[now.getMonth()];
-
-let time = document.querySelector("#current-time");
-time.innerHTML = `${currentHours}:${currentMinutes}`;
-let currentDay = document.querySelector("#current-day");
-currentDay.innerHTML = `${day}`;
-let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = `${now.getDate()} ${month}`;
 
 // Current Temperature on location //
 
@@ -85,6 +77,7 @@ function showCityTemperature(response) {
   let loCurrentTemp = document.querySelector("#current-lowest-temp");
   let windSpeed = document.querySelector("#wind-speed");
   let humidity = document.querySelector("#humidity");
+  let currentTime = document.querySelector("#current-time");
   typedCity.innerHTML = `${city}, ${country}`;
   description.innerHTML = response.data.weather[0].description;
   hiCurrentTemp.innerHTML = Math.round(response.data.main.temp_max);
@@ -99,5 +92,7 @@ locationButton.addEventListener("click", getCurrentLocation);
 
 let searchBar = document.querySelector("#search-bar");
 searchBar.addEventListener("submit", showCity);
+
+formatDate();
 
 search("New York");
