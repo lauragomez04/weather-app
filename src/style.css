@@ -31,13 +31,10 @@ h2 {
   font-size: 18pt;
   font-weight: 300;
   text-align: left;
+  text-transform: capitalize;
   margin-bottom: 0;
   position: relative;
-  top: -16px;
-}
-
-#description:first-letter {
-  text-transform: capitalize;
+  top: -21px;
 }
 
 .units {
@@ -77,14 +74,14 @@ h2 {
 }
 
 .time {
-  font-size: 30pt;
+  font-size: 28pt;
   margin-bottom: -10px;
   position: relative;
   top: -19px;
 }
 
 .date {
-  font-size: 14pt;
+  font-size: 16pt;
   position: relative;
   top: -20px;
 }
