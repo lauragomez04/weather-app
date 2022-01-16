@@ -8,8 +8,7 @@ body {
   color: #77529e;
 }
 h1,
-h2,
-h3 {
+h2 {
   text-align: center;
   margin-top: -15px;
 }
@@ -24,17 +23,20 @@ h2 {
   font-weight: 300;
 }
 
-h3 {
-  font-weight: 300;
-  text-align: left;
-  margin-bottom: 0;
-}
-
 #basic-addon3:hover {
   background-color: rgb(165, 189, 253, 0.01);
 }
 
-#description::first-letter {
+#description {
+  font-size: 18pt;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: 0;
+  position: relative;
+  top: -16px;
+}
+
+#description:first-letter {
   text-transform: capitalize;
 }
 
@@ -75,18 +77,23 @@ h3 {
 }
 
 .time {
-  font-size: 23pt;
+  font-size: 30pt;
   margin-bottom: -10px;
+  position: relative;
+  top: -19px;
 }
 
 .date {
   font-size: 14pt;
+  position: relative;
+  top: -20px;
 }
 
 .last-update {
   opacity: 40%;
-  margin-top: -4px;
   font-size: 12pt;
+  position: relative;
+  top: -22px;
 }
 
 .main-data {
@@ -111,7 +118,7 @@ h3 {
   font-weight: 300;
   padding: 7px;
   margin-right: 0.1rem;
-  margin-top: 115px;
+  margin-top: 80px;
   text-align: center;
 }
 
@@ -158,9 +165,9 @@ h3 {
 }
 
 .bi-brightness-high {
-  display: block;
   font-size: 40pt;
-  font-weight: bold;
+  position: relative;
+  top: -7px;
   text-align: left;
 }
 
