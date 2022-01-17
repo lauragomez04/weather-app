@@ -42,18 +42,10 @@ h2 {
   top: -25px;
 }
 
-.fahrenheit {
-  color: #8db0ff;
-  text-decoration: none;
-}
-
-.fahrenheit:hover {
+.cover .active {
   color: #77529e;
-}
-
-.celsius {
+  cursor: default;
   text-decoration: none;
-  color: #77529e;
 }
 
 .cover {
