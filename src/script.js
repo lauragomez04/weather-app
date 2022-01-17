@@ -88,6 +88,7 @@ function showCityTemperature(response) {
     "src",
     `weather-icons/${response.data.weather[0].icon}.svg`
   );
+  mainIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 //
