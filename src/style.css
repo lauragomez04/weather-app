@@ -33,8 +33,6 @@ h2 {
   text-align: left;
   text-transform: capitalize;
   margin-bottom: 0;
-  position: relative;
-  top: -21px;
 }
 
 .units {
@@ -76,21 +74,17 @@ h2 {
 .time {
   font-size: 28pt;
   margin-bottom: -10px;
-  position: relative;
-  top: -19px;
 }
 
 .date {
-  font-size: 16pt;
-  position: relative;
-  top: -20px;
+  font-size: 14pt;
 }
 
 .last-update {
   opacity: 40%;
-  font-size: 12pt;
+  font-size: 10pt;
   position: relative;
-  top: -22px;
+  top: -3px;
 }
 
 .main-data {
@@ -115,7 +109,7 @@ h2 {
   font-weight: 300;
   padding: 7px;
   margin-right: 0.1rem;
-  margin-top: 80px;
+  margin-top: 105px;
   text-align: center;
 }
 
@@ -161,11 +155,10 @@ h2 {
   opacity: 50%;
 }
 
-.bi-brightness-high {
-  font-size: 40pt;
-  position: relative;
-  top: -7px;
-  text-align: left;
+.mainIcon {
+  display: block;
+  width: 60px;
+  height: 60px;
 }
 
 .form-control {
