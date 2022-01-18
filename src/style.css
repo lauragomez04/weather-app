@@ -100,7 +100,6 @@ h2 {
   border-radius: 12px;
   font-weight: 300;
   padding: 7px;
-  margin-right: 0.1rem;
   margin-top: 105px;
   text-align: center;
 }
@@ -108,41 +107,28 @@ h2 {
 .container-fluid {
   margin-top: 20px;
   text-align: center;
-  padding-left: 0.8rem;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
-.col .sunday,
-.monday,
-.tuesday,
-.wednesday,
-.thursday {
+.col .sunday {
   background-color: rgb(165, 189, 253, 0.17);
   border-radius: 12px;
   font-size: 10pt;
   font-weight: 300;
-  margin-right: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.thursday {
-  margin-right: -10px;
-}
-
-.bi-sun,
-.bi-cloud-sun,
-.bi-cloud-rain-heavy,
-.bi-cloud-lightning-rain {
-  font-size: 16pt;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 
 #current-lowest-temp,
-.degree,
-.temp-min,
-.temp-min-1,
-.temp-min-2,
-.temp-min-3,
-.temp-min-4 {
+.degree {
+  color: #77529e;
+  opacity: 50%;
+}
+
+.temp-min {
   color: #77529e;
   opacity: 50%;
 }
@@ -151,6 +137,10 @@ h2 {
   display: block;
   width: 60px;
   height: 60px;
+}
+
+.forecastIcon {
+  width: 30px;
 }
 
 .form-control {

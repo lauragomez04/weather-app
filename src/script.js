@@ -51,7 +51,7 @@ function showPositionData(position) {
   axios.get(apiUrl).then(showCityTemperature);
 }
 
-// Default city + input city //
+// Default city + input city + weather & forecast response//
 
 function showCity(event) {
   event.preventDefault();
@@ -63,6 +63,38 @@ function search(city) {
   let apiKey = "38d0737aa378d1f2ac80fe5aa5611e88";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCityTemperature);
+}
+
+function showForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+   
+              <div class="col sunday">
+                ${day}
+                <br />
+                <br />
+                <img
+                  id="icon"
+                  class="forecastIcon"
+                  src="weather-icons/01d.svg"
+                  alt="sunny"
+                  role="img"
+                />
+                <br />
+                <br />
+                <div><span>18</span>º</div>
+                <div class="temp-min"><span>18</span>º</div>
+              </div>
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showCityTemperature(response) {
@@ -126,3 +158,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("New York");
 formatDate();
+showForecast();
