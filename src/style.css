@@ -66,6 +66,8 @@ h2 {
 .time {
   font-size: 28pt;
   margin-bottom: -10px;
+  position: relative;
+  top: 1px;
 }
 
 .date {
@@ -107,14 +109,14 @@ h2 {
 .container-fluid {
   margin-top: 20px;
   text-align: center;
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .col .sunday {
   background-color: rgb(165, 189, 253, 0.17);
   border-radius: 12px;
-  font-size: 10pt;
+  font-size: 12pt;
   font-weight: 300;
   padding-top: 10px;
   padding-bottom: 10px;
