@@ -65,36 +65,53 @@ function search(city) {
   axios.get(apiUrl).then(showCityTemperature);
 }
 
-function showForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function showForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
    
               <div class="col sunday">
-                ${day}
+                ${formatDay(forecastDay.dt)}
                 <br />
                 <br />
                 <img
                   id="icon"
                   class="forecastIcon"
-                  src="weather-icons/01d.svg"
+                  src="weather-icons/${forecastDay.weather[0].icon}.svg"
                   alt="sunny"
                   role="img"
                 />
                 <br />
                 <br />
-                <div><span>18</span>º</div>
-                <div class="temp-min"><span>18</span>º</div>
+                <div>${Math.round(forecastDay.temp.max)}º</div>
+                <div class="temp-min">${Math.round(forecastDay.temp.min)}º</div>
               </div>
       `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "38d0737aa378d1f2ac80fe5aa5611e88";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 function showCityTemperature(response) {
@@ -122,6 +139,8 @@ function showCityTemperature(response) {
     `weather-icons/${response.data.weather[0].icon}.svg`
   );
   mainIcon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function showFahrenheitTemperature(event) {
@@ -158,4 +177,3 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("New York");
 formatDate();
-showForecast();
