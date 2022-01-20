@@ -149,6 +149,9 @@ function showCityTemperature(response) {
     illustration.setAttribute("src", `images/13d.png`);
   }
 
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
   getForecast(response.data.coord);
 }
 
