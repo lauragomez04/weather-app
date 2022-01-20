@@ -125,6 +125,7 @@ function showCityTemperature(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let humidity = document.querySelector("#humidity");
   let mainIcon = document.querySelector("#main-icon");
+  let illustration = document.querySelector("#illustration");
   celsiusTemperature = response.data.main.temp;
 
   currentTemp.innerHTML = Math.round(celsiusTemperature);
@@ -139,6 +140,14 @@ function showCityTemperature(response) {
     `weather-icons/${response.data.weather[0].icon}.svg`
   );
   mainIcon.setAttribute("alt", response.data.weather[0].description);
+  illustration.setAttribute(
+    "src",
+    `images/${response.data.weather[0].icon}.png`
+  );
+  illustration.setAttribute("alt", response.data.weather[0].description);
+  if (celsiusTemperature < 0) {
+    illustration.setAttribute("src", `images/13d.png`);
+  }
 
   getForecast(response.data.coord);
 }
