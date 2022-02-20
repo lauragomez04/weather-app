@@ -163,7 +163,7 @@ h2 {
   color: #77529e;
 }
 
-.illustration {
+#illustration {
   display: block;
   margin: 0 auto;
   max-width: 300px;
@@ -178,4 +178,14 @@ h2 {
 
 #open-source {
   color: #77529e;
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin-top: 0;
+  }
+
+  #weather-forecast {
+    margin-bottom: 10px;
+  }
 }
